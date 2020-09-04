@@ -61,4 +61,5 @@ macx {
 }
 
 DISTFILES += \
+    qml/scenes/LoadingScene.qml \
     qml/scenes/SceneBase.qml

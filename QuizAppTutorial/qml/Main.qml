@@ -16,17 +16,14 @@ GameWindow {
     screenWidth: 640
     screenHeight: 960
 
-    // For testing purposes only!
-    // TODO: remove
-    Scene {
-        id: testScene
-
-        Rectangle {
-            id: background
-            anchors.fill: testScene.gameWindowAnchorItem
-            color: "blue"
-        }
+    LoadingScene {
+        id: loadingScene
     }
 
-    activeScene: testScene
+    activeScene: loadingScene
+
+    // Show the loading scene as soon as the GameWindow is ready
+    Component.onCompleted: {
+        loadingScene.opacity = 1
+    }
 }
