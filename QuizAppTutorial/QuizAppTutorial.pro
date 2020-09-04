@@ -38,7 +38,8 @@ DEPLOYMENTFOLDERS += assetsFolder
 
 
 # The .cpp file which was generated for your project. Feel free to hack it.
-SOURCES += main.cpp
+SOURCES += \
+    main.cpp
 
 
 android {
@@ -58,3 +59,6 @@ win32 {
 macx {
     ICON = macx/app_icon.icns
 }
+
+DISTFILES += \
+    qml/scenes/SceneBase.qml
