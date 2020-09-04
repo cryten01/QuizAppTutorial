@@ -1,0 +1,51 @@
+[{
+        "question": "Where is Rome?",
+        "correctAnswer": "Italy",
+        "wrongAnswers": ["France", "USA", "Poland"]
+    },
+    {
+        "question": "What is Garfields favorite food?",
+        "correctAnswer": "Lasagne",
+        "wrongAnswers": ["Spinach", "Pizza", "Pasta"]
+    },
+    {
+        "question": "What is the capital of Australia",
+        "correctAnswer": "Canberra",
+        "wrongAnswers": ["Sydney", "Melbourne", "Brisbane"]
+    },
+    {
+        "question": "Which currency is used for money transactions in Japan?",
+        "correctAnswer": "Yen",
+        "wrongAnswers": ["Dollar", "Euro", "Pound"]
+    },
+    {
+        "question": "Who was the first president of the United States of America?",
+        "correctAnswer": "George Washington",
+        "wrongAnswers": ["Thomas Jefferson", "Abraham Lincoln", "Theodore Roosevelt"]
+    },
+    {
+        "question": "Who was no member of the rock band Rolling Stones?",
+        "correctAnswer": "David Bowie",
+        "wrongAnswers": ["Mick Jagger", "Keith Richards", "Charlie Watts"]
+    },
+    {
+        "question": "Nelson Mandela was South African's first black president during...?",
+        "correctAnswer": "1994 - 1999",
+        "wrongAnswers": ["1990 - 1994", "1985 - 1990", "1999 - 2003"]
+    },
+    {
+        "question": "The famous Tower Bridge can be found in which city?",
+        "correctAnswer": "London",
+        "wrongAnswers": ["San Francisco", "Paris", "Venice"]
+    },
+    {
+        "question": "Albert Einstein, who developed the theory of relativity was born in...?",
+        "correctAnswer": "Germany",
+        "wrongAnswers": ["Austria", "Switzerland", "Netherlands"]
+    },
+    {
+        "question": "Which famous singer died in June 2009?",
+        "correctAnswer": "Michael Jackson",
+        "wrongAnswers": ["Whitney Houston", "Amy Winehouse", "David Bowie"]
+    }
+]
