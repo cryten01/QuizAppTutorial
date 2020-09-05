@@ -73,4 +73,9 @@ SceneBase {
             gameManager.startGame()
         }
     }
+
+    function updateHighscoreText(highScore)
+    {
+        highscoreText.text = "Highscore: " + highScore + " / 10";
+    }
 }

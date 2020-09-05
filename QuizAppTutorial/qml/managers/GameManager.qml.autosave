@@ -138,7 +138,6 @@ Item {
     }
 
     function increaseCorrectAnswers() {
-                console.log("The end is near!" + nrOfCorrectAnswers)
         nrOfCorrectAnswers++;
     }
 }

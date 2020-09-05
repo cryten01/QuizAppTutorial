@@ -149,13 +149,15 @@ SceneBase {
         id: showResultDelay
         interval: 500
         running: false
-        repeat: true
+        repeat: false
 
         onTriggered: {
             checkAndShowResult(answerButton1)
             checkAndShowResult(answerButton2)
             checkAndShowResult(answerButton3)
             checkAndShowResult(answerButton4)
+
+            gameManager.stopCurrentRound()
         }
     }
 
@@ -171,11 +173,11 @@ SceneBase {
         var isAnswerCorrect = gameManager.checkAnswer(button.text)
 
         if (isAnswerCorrect) {
-            button.setState("correctAnswer")
-
             if (button.state === "checkedIn") {
                 gameManager.increaseCorrectAnswers()
             }
+
+            button.setState("correctAnswer")
         }
 
         if (!isAnswerCorrect && button.state === "checkedIn") {
