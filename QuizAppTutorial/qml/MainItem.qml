@@ -17,4 +17,8 @@ Item {
     SceneManager {
         id: sceneManager
     }
+
+    GameManager {
+        id: gameManager
+    }
 }

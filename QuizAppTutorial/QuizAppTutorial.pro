@@ -62,6 +62,7 @@ macx {
 
 DISTFILES += \
     qml/MainItem.qml \
+    qml/managers/GameManager.qml \
     qml/managers/SceneManager.qml \
     qml/scenes/GameScene.qml \
     qml/scenes/LoadingScene.qml \
