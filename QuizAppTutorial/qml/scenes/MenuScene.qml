@@ -70,6 +70,7 @@ SceneBase {
 
         onClicked: {
             sceneManager.setState("game")
+            gameManager.startGame()
         }
     }
 }
