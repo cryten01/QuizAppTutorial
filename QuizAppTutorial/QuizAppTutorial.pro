@@ -61,8 +61,11 @@ macx {
 }
 
 DISTFILES += \
+    qml/scenes/GameScene.qml \
     qml/scenes/LoadingScene.qml \
     qml/scenes/MenuScene.qml \
     qml/scenes/SceneBase.qml \
+    qml/ui/AnswerButton.qml \
     qml/ui/ButtonBase.qml \
+    qml/ui/CountDownBar.qml \
     qml/ui/MenuButton.qml
