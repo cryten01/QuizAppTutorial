@@ -110,8 +110,14 @@ SceneBase {
         answerButton4.text = answers[3];
     }
 
-    Component.onCompleted: {
-        // For testing purposes only!
-        setAnswers(["Yes", "No", "Maybe", "Of course not!"]);
+    function resetAnswerButtonStates() {
+        answerButton1.setState("default");
+        answerButton2.setState("default");
+        answerButton3.setState("default");
+        answerButton4.setState("default");
+    }
+
+    function restartCountDown() {
+        countDownBar.restartCountDown()
     }
 }
