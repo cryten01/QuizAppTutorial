@@ -20,10 +20,14 @@ GameWindow {
         id: loadingScene
     }
 
-    activeScene: loadingScene
+    MenuScene {
+        id: menuScene
+    }
+
+    activeScene: menuScene
 
     // Show the loading scene as soon as the GameWindow is ready
     Component.onCompleted: {
-        loadingScene.opacity = 1
+        menuScene.opacity = 1
     }
 }

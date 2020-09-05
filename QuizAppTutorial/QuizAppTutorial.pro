@@ -62,4 +62,7 @@ macx {
 
 DISTFILES += \
     qml/scenes/LoadingScene.qml \
-    qml/scenes/SceneBase.qml
+    qml/scenes/MenuScene.qml \
+    qml/scenes/SceneBase.qml \
+    qml/ui/ButtonBase.qml \
+    qml/ui/MenuButton.qml
