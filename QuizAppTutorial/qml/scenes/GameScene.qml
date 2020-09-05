@@ -80,18 +80,34 @@ SceneBase {
         AnswerButton {
             id: answerButton1
             text: "Answer 1"
+            onClicked: {
+                state = "checkedIn"
+                startCheckAnswers()
+            }
         }
         AnswerButton {
             id: answerButton2
             text: "Answer 2"
+            onClicked: {
+                state = "checkedIn"
+                startCheckAnswers()
+            }
         }
         AnswerButton {
             id: answerButton3
             text: "Answer 3"
+            onClicked: {
+                state = "checkedIn"
+                startCheckAnswers()
+            }
         }
         AnswerButton {
             id: answerButton4
             text: "Answer 4"
+            onClicked: {
+                state = "checkedIn"
+                startCheckAnswers()
+            }
         }
     }
 
@@ -119,5 +135,51 @@ SceneBase {
 
     function restartCountDown() {
         countDownBar.restartCountDown()
+    }
+
+    function setAnswerButtonsActive(isEnabled) {
+        answerButton1.enabled = isEnabled
+        answerButton2.enabled = isEnabled
+        answerButton3.enabled = isEnabled
+        answerButton4.enabled = isEnabled
+    }
+
+
+    Timer {
+        id: showResultDelay
+        interval: 500
+        running: false
+        repeat: true
+
+        onTriggered: {
+            checkAndShowResult(answerButton1)
+            checkAndShowResult(answerButton2)
+            checkAndShowResult(answerButton3)
+            checkAndShowResult(answerButton4)
+        }
+    }
+
+    function startCheckAnswers() {
+        // First lock all buttons so that no new user input is possible
+        setAnswerButtonsActive(false)
+
+        // Then after 2 seconds we check each button if it is correct and was clicked
+        showResultDelay.start()
+    }
+
+    function checkAndShowResult(button) {
+        var isAnswerCorrect = gameManager.checkAnswer(button.text)
+
+        if (isAnswerCorrect) {
+            button.setState("correctAnswer")
+
+            if (button.state === "checkedIn") {
+                gameManager.increaseCorrectAnswers()
+            }
+        }
+
+        if (!isAnswerCorrect && button.state === "checkedIn") {
+            button.setState("wrongAnswer")
+        }
     }
 }

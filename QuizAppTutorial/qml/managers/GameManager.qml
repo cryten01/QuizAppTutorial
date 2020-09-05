@@ -89,8 +89,21 @@ Item {
         gameScene.setQuestion(question)
         gameScene.setAnswers(answers)
         gameScene.resetAnswerButtonStates();
+        gameScene.setAnswerButtonsActive(true);
 
         // Now start the round by restarting the countdown!
         gameScene.restartCountDown()
+    }
+
+    function checkAnswer(answer) {
+        if (answer === currentCorrectAnswer) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function increaseCorrectAnswers() {
+        nrOfCorrectAnswers++;
     }
 }
