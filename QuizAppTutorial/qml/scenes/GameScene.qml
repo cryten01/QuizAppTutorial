@@ -7,7 +7,7 @@ SceneBase {
 
     Rectangle {
         id: background
-        color: "orange"
+        color: palette.gameSceneBGColor
 
         anchors.fill: scene.gameWindowAnchorItem
     }
@@ -23,6 +23,7 @@ SceneBase {
 
         onTimeIsUp: {
             countDownBar.stopCountDown()
+            gameManager.stopCurrentRound()
         }
     }
 
@@ -30,8 +31,8 @@ SceneBase {
         id: currentRoundText
 
         text: "Round 0 / 10"
-        color: "white"
-        font.pixelSize: 24
+        color: palette.textDefaultColor
+        font.pixelSize: palette.textDefaultSize
 
         anchors {
             top: countDownBar.bottom
@@ -50,8 +51,8 @@ SceneBase {
         id: questionText
 
         text: "Is this a test question?"
-        color: "white"
-        font.pixelSize: 24
+        color: palette.textDefaultColor
+        font.pixelSize: palette.textDefaultSize
         width: 60
 
         anchors {

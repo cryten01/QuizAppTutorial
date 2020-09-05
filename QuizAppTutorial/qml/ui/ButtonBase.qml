@@ -9,8 +9,8 @@ Item {
     signal pressed
     signal released
 
-    property string defaultColor: "red"
-    property string pressedColor: "blue"
+    property string defaultColor: palette.btnDefaultColor
+    property string pressedColor: palette.btnPressedColor
     property alias color: background.color
     property alias text: buttonText.text
     property alias pixelSize: buttonText.font.pixelSize
@@ -25,7 +25,7 @@ Item {
     // button text
     Text {
         id: buttonText
-        color: "white"
+        color: palette.textDefaultColor
         anchors.centerIn: background
     }
 

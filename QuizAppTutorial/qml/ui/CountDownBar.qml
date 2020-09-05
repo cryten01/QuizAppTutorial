@@ -8,13 +8,13 @@ Item {
 
     Rectangle {
         id: backgroundBar
-        color: "grey"
+        color: palette.barBGColor
         height: 20
         width: parent.width
 
         Rectangle {
             id: progressBar
-            color: "white"
+            color: palette.barProgressColor
             width: parent.width
             height: parent.height
         }

@@ -72,4 +72,5 @@ DISTFILES += \
     qml/ui/AnswerButton.qml \
     qml/ui/ButtonBase.qml \
     qml/ui/CountDownBar.qml \
-    qml/ui/MenuButton.qml
+    qml/ui/MenuButton.qml \
+    qml/ui/Palette.qml

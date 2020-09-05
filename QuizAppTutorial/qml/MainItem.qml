@@ -2,9 +2,14 @@ import QtQuick 2.0
 import Felgo 3.0
 import "scenes"
 import "managers"
+import "ui"
 
 Item {
     id: mainItem
+
+    Palette {
+        id: palette
+    }
 
     MenuScene {
         id: menuScene

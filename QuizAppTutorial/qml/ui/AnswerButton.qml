@@ -6,26 +6,26 @@ ButtonBase {
 
     width: 280
     height: 60
-    pixelSize: 24
+    pixelSize: palette.textDefaultSize
 
     state: "default"
 
     states: [
         State {
             name: "default"
-            PropertyChanges {target: button; color: "grey"}
+            PropertyChanges {target: button; color: palette.btnDefaultColor}
         },
         State {
             name: "checkedIn"
-            PropertyChanges {target: button; color: "yellow"}
+            PropertyChanges {target: button; color: palette.btnCheckedInColor}
         },
         State {
             name: "correctAnswer"
-            PropertyChanges {target: button; color: "green"}
+            PropertyChanges {target: button; color: palette.btnCorrectAnswerColor}
         },
         State {
             name: "wrongAnswer"
-            PropertyChanges {target: button; color: "red"}
+            PropertyChanges {target: button; color: palette.btnWrongAnswerColor}
         }
     ]
 

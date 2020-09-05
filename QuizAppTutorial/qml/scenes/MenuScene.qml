@@ -9,7 +9,7 @@ SceneBase {
 
     Rectangle {
         id: background
-        color: "lightblue"
+        color: palette.menuSceneBGColor
 
         anchors.fill: scene.gameWindowAnchorItem
     }
@@ -18,8 +18,8 @@ SceneBase {
         id: welcomeText
 
         text: "Welcome to Quiz App!"
-        color: "white"
-        font.pixelSize: 36
+        color: palette.textDefaultColor
+        font.pixelSize: palette.textHighlightSize
 
         anchors {
             top: scene.gameWindowAnchorItem.top
@@ -38,8 +38,8 @@ SceneBase {
         id: highscoreText
 
         text: "Highscore: 0 / 10"
-        color: "white"
-        font.pixelSize: 24
+        color: palette.textDefaultColor
+        font.pixelSize: palette.textDefaultSize
 
         anchors {
             top: welcomeText.bottom
@@ -60,7 +60,7 @@ SceneBase {
         text: "Start Game!"
         width: 280
         height: 60
-        pixelSize: 24
+        pixelSize: palette.textDefaultSize
 
         anchors {
             horizontalCenter: scene.gameWindowAnchorItem.horizontalCenter
