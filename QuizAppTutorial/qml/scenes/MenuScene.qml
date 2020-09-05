@@ -71,6 +71,7 @@ SceneBase {
         onClicked: {
             sceneManager.setState("game")
             gameManager.startGame()
+            audioManager.play(audioManager.idClick)
         }
     }
 

@@ -25,4 +25,8 @@ Item {
             sceneManager.setState("menu")
         }
     }
+
+    AudioManager {
+        id: audioManager
+    }
 }

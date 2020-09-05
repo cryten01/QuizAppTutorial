@@ -51,7 +51,8 @@ SceneBase {
 
         text: "Is this a test question?"
         color: "white"
-        font.pixelSize: 36
+        font.pixelSize: 24
+        width: 60
 
         anchors {
             top: currentRoundText.bottom
@@ -146,7 +147,7 @@ SceneBase {
 
 
     Timer {
-        id: showResultDelay
+        id: showResultsDelay
         interval: 500
         running: false
         repeat: false
@@ -166,7 +167,7 @@ SceneBase {
         setAnswerButtonsActive(false)
 
         // Then after 2 seconds we check each button if it is correct and was clicked
-        showResultDelay.start()
+        showResultsDelay.start()
     }
 
     function checkAndShowResult(button) {
@@ -175,6 +176,7 @@ SceneBase {
         if (isAnswerCorrect) {
             if (button.state === "checkedIn") {
                 gameManager.increaseCorrectAnswers()
+                audioManager.play(audioManager.idCorrectAnswer)
             }
 
             button.setState("correctAnswer")
@@ -182,6 +184,7 @@ SceneBase {
 
         if (!isAnswerCorrect && button.state === "checkedIn") {
             button.setState("wrongAnswer")
+            audioManager.play(audioManager.idWrongAnswer)
         }
     }
 }
