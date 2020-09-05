@@ -20,18 +20,39 @@ GameWindow {
         id: loadingScene
     }
 
-    MenuScene {
-        id: menuScene
-    }
-
-    GameScene {
-        id: gameScene
-    }
-
-    activeScene: gameScene
+    activeScene: loadingScene
 
     // Show the loading scene as soon as the GameWindow is ready
     Component.onCompleted: {
-        gameScene.opacity = 1
+        loadingScene.opacity = 1
+        mainItemDelay.start()
+    }
+
+    // Start with the loading of all game components when the fade-in animation of the loading scene was fully displayed
+    Timer {
+        id: mainItemDelay
+        interval: 1000
+        onTriggered: {
+            mainItemLoader.source = "MainItem.qml"
+        }
+    }
+
+    // As soon as we set the source property, the loader will load the game
+    Loader {
+        id: mainItemLoader
+        onLoaded: {
+            if(item) {
+                hideLoadingSceneDelay.start()
+            }
+        }
+    }
+
+    // Then give the game a time to fully display before hiding the loading scene, just to be sure it looks smooth also on low-end devices
+    Timer {
+        id: hideLoadingSceneDelay
+        interval: 200
+        onTriggered: {
+            loadingScene.opacity = 0
+        }
     }
 }

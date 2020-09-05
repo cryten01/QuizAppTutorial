@@ -5,6 +5,8 @@ import "../ui"
 SceneBase {
     id: scene
 
+    signal startGameButtonClicked
+
     Rectangle {
         id: background
         color: "lightblue"
@@ -64,6 +66,10 @@ SceneBase {
             horizontalCenter: scene.gameWindowAnchorItem.horizontalCenter
             top: highscoreText.bottom
             topMargin: 60
+        }
+
+        onClicked: {
+            sceneManager.setState("game")
         }
     }
 }
