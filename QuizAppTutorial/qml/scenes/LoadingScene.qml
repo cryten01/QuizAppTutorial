@@ -6,7 +6,7 @@ SceneBase {
 
     Rectangle {
         id: background
-        color: "blue"
+        color: "#192a56"
 
         anchors.fill: scene.gameWindowAnchorItem
     }
