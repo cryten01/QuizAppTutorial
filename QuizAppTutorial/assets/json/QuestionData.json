@@ -47,5 +47,90 @@
         "question": "Which famous singer died in June 2009?",
         "correctAnswer": "Michael Jackson",
         "wrongAnswers": ["Whitney Houston", "Amy Winehouse", "David Bowie"]
+    },
+    {
+        "question": "Yellow Submarine is a song from 1966 by which band?",
+        "correctAnswer": "The Beatles",
+        "wrongAnswers": ["The Rolling Stones", "The Beach Boys", "Bee Gees"]
+    },
+    {
+        "question": "The Nobel Prize was named after the Swedish chemist …?",
+        "correctAnswer": "Alfred Nobel",
+        "wrongAnswers": ["Alfons Nobel", "Albert Nobel", "Alex Nobel"]
+    },
+    {
+        "question": "In which region of Italy you find the leaning tower of Pisa?",
+        "correctAnswer": "Tuscany",
+        "wrongAnswers": ["Sardinia", "Calabria", "Lombardy"]
+    },
+    {
+        "question": "Caracas is the capital of …?",
+        "correctAnswer": "Venezuela",
+        "wrongAnswers": ["Paraguay", "Uruguay", "Bolivia"]
+    },
+    {
+        "question": "In which year the online video sharing plattform Youtube was created?",
+        "correctAnswer": "2005",
+        "wrongAnswers": ["2007", "2009", "2011"]
+    },
+    {
+        "question": "What was the text of the first SMS message?",
+        "correctAnswer": "Merry Christmas",
+        "wrongAnswers": ["Happy Birthday", "Hello World", "How are you"]
+    },
+    {
+        "question": "The famous Tower Bridge is a world-famour symbol of what city?",
+        "correctAnswer": "London",
+        "wrongAnswers": ["San Francisco", "Paris", "Venice"]
+    },
+    {
+        "question": "What is the chemical element with the symbol Au?",
+        "correctAnswer": "gold",
+        "wrongAnswers": ["silver", "nickel", "platinum"]
+    },
+    {
+        "question": "A human has seven cervical vertebrae. Ho many does a giraffe have?",
+        "correctAnswer": "7",
+        "wrongAnswers": ["17", "27", "37"]
+    },
+    {
+        "question": "Andrew Lloyd Webber is one of the most famous composer of musical theatre. Which musical is not composed by Andrew Lloyd Webber? ",
+        "correctAnswer": "Elisabeth",
+        "wrongAnswers": ["Evita", "Cats", "The Phantom of the Opera"]
+    },
+    {
+        "question": "The Ballon d'Or is an annual football award. Who won with six awards the most  Ballon d'Or in history?",
+        "correctAnswer": "Lionel Messi",
+        "wrongAnswers": ["Cristiano Ronaldo", "Ronaldo", "Franz Beckenbauer"]
+    },
+    {
+        "question": "Wlliam Shakespeare's play Much Ado About Nothing was filmed in 1993. Who is not playing in that movie?",
+        "correctAnswer": "Julia Roberts",
+        "wrongAnswers": ["Denzel Wahsington", "Keanu Reeves", "Emma Thompson"]
+    },
+    {
+        "question": "Which planet is the smallest and innermost planet oin the Solar System?",
+        "correctAnswer": "Mercury",
+        "wrongAnswers": ["Venus", "Earth", "Mars"]
+    },
+    {
+        "question": "The magnetized nedle of a compass is always pointed to the ...?",
+        "correctAnswer": "North",
+        "wrongAnswers": ["South", "West", "East"]
+    },
+    {
+        "question": "The American online social media and social networking service Facebook was launched in …?",
+        "correctAnswer": "2004",
+        "wrongAnswers": ["2002", "2000", "2006"]
+    },
+    {
+        "question": "London has several of England's leading football clubs. Which is none of them?",
+        "correctAnswer": "Manchester United",
+        "wrongAnswers": ["Arsenal", "Chelsea", "West Ham United"]
+    },
+    {
+        "question": "The Hobbit is a bestseller by the autor  …?",
+        "correctAnswer": "J.R.R. Tolkien",
+        "wrongAnswers": ["J.K.Rowling", "Dan Brown", "Antoine de Saint-Exupery"]
     }
 ]

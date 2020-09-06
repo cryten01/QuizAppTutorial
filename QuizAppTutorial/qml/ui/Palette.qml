@@ -9,7 +9,7 @@ Item {
     property string gameSceneBGColor: "#273c75"
 
     property string btnDefaultColor: "#192a56"
-    property string btnPressedColor: "#85929e"
+    property string btnPressedColor: "#4368cc"
     property string btnCheckedInColor: "#e1b12c"
     property string btnWrongAnswerColor: "#c23616"
     property string btnCorrectAnswerColor: "#44bd32"
