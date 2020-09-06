@@ -18,6 +18,6 @@ Item {
     property string barProgressColor: "#f5f6fa"
 
     property string textDefaultColor: "#f5f6fa"
-    property int textDefaultSize: 24
+    property int textDefaultSize: 20
     property int textHighlightSize: 36
 }

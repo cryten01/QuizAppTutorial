@@ -24,7 +24,7 @@
         "wrongAnswers": ["Thomas Jefferson", "Abraham Lincoln", "Theodore Roosevelt"]
     },
     {
-        "question": "Who was no member of the rock band Rolling Stones?",
+        "question": "Who was not a member of the rock band Rolling Stones?",
         "correctAnswer": "David Bowie",
         "wrongAnswers": ["Mick Jagger", "Keith Richards", "Charlie Watts"]
     },
@@ -99,7 +99,7 @@
         "wrongAnswers": ["Evita", "Cats", "The Phantom of the Opera"]
     },
     {
-        "question": "The Ballon d'Or is an annual football award. Who won with six awards the most  Ballon d'Or in history?",
+        "question": "The Ballon d'Or is an annual football award. Who won with six awards the most Ballon d'Or in history?",
         "correctAnswer": "Lionel Messi",
         "wrongAnswers": ["Cristiano Ronaldo", "Ronaldo", "Franz Beckenbauer"]
     },
@@ -109,12 +109,12 @@
         "wrongAnswers": ["Denzel Wahsington", "Keanu Reeves", "Emma Thompson"]
     },
     {
-        "question": "Which planet is the smallest and innermost planet oin the Solar System?",
+        "question": "Which planet is the smallest and innermost planet in the Solar System?",
         "correctAnswer": "Mercury",
         "wrongAnswers": ["Venus", "Earth", "Mars"]
     },
     {
-        "question": "The magnetized nedle of a compass is always pointed to the ...?",
+        "question": "The magnetized needle of a compass is always pointing to the ...?",
         "correctAnswer": "North",
         "wrongAnswers": ["South", "West", "East"]
     },
