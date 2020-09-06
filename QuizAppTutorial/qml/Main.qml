@@ -31,7 +31,7 @@ GameWindow {
     // Start with the loading of all game components when the fade-in animation of the loading scene was fully displayed
     Timer {
         id: mainItemDelay
-        interval: 1000
+        interval: 2000
         onTriggered: {
             mainItemLoader.source = "MainItem.qml"
         }

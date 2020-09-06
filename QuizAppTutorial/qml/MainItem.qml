@@ -25,10 +25,6 @@ Item {
 
     GameManager {
         id: gameManager
-
-        onGameHasEnded: {
-            sceneManager.setState("menu")
-        }
     }
 
     AudioManager {

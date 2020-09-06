@@ -12,58 +12,17 @@ Item {
     property int nrOfCorrectAnswers: 0
     property string currentCorrectAnswer: ""
 
-    signal gameHasEnded
-
     Component.onCompleted: {
-        // Parse JSON file that contains the question data
         loadQuestionDataFromJSON("../../assets/json/QuestionData.json", questionDataPool)
     }
-
-
-    function loadQuestionDataFromJSON(source, target) {
-        var xhr = new XMLHttpRequest();
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                var dataString = xhr.responseText;
-                questionDataPool = JSON.parse(dataString);
-            }
-        }
-
-        // False makes get request synchronous and ensures json data is ready when used
-        xhr.open("GET", Qt.resolvedUrl(source), false);
-        xhr.send(null);
-    }
-
 
     function startGame() {
         // Reset player values
         nrOfCorrectAnswers = 0
         currentRound = 0
 
-        // Shuffle questions and their order
         shuffleArray(questionDataPool)
-
         startNewRound()
-    }
-
-
-    function shuffleArray(arrayToShuffle) {
-        // The temporary container that is used for swapping
-        var temp;
-
-        // arrayToShuffle.length - 1 because indices go from 0 to n-1
-        // >= 0 because we want to swap the first element with the second one as well
-        for (var index = arrayToShuffle.length - 1; index > 0; index--) {
-
-            // Floor because we only want full indices
-            var randomIndex = Math.floor(Math.random() * index)
-
-            // Swap elements at indices
-            temp = arrayToShuffle[index];
-            arrayToShuffle[index] = arrayToShuffle[randomIndex];
-            arrayToShuffle[randomIndex] = temp;
-        }
     }
 
     function startNewRound() {
@@ -89,21 +48,15 @@ Item {
 
         // Send all relevant data to the game scene
         gameScene.setCurrentRoundText(currentRound)
-        gameScene.setQuestion(question)
-        gameScene.setAnswers(answers)
+        gameScene.setQuestionTexts(question)
+        gameScene.setAnswerButtonTexts(answers)
+
+        // Request preparing buttons
         gameScene.resetAnswerButtonStates();
         gameScene.setAnswerButtonsActive(true);
 
         // Now start the round by restarting the countdown!
         gameScene.restartCountDown()
-    }
-
-    function checkAnswer(answer) {
-        if (answer === currentCorrectAnswer) {
-            return true;
-        } else {
-            return false;
-        }
     }
 
     Timer {
@@ -133,8 +86,53 @@ Item {
             menuScene.updateHighscoreText(highScore);
         }
 
-        // Emit a gameHasEnded signal so that the sceneManager can change the scene back to the menu
-        gameHasEnded()
+        // Notify the sceneManager so that he can switch the scene back to the menu scene
+        sceneManager.setState("menu")
+    }
+
+
+    //////////////////////
+    // Helper functions
+    //////////////////////
+
+    function loadQuestionDataFromJSON(source, target) {
+        var xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                var dataString = xhr.responseText;
+                questionDataPool = JSON.parse(dataString);
+            }
+        }
+
+        // False makes get request synchronous and ensures json data is ready when used
+        xhr.open("GET", Qt.resolvedUrl(source), false);
+        xhr.send(null);
+    }
+
+    function shuffleArray(arrayToShuffle) {
+
+        var temp;
+
+        // arrayToShuffle.length - 1 because indices go from 0 to n-1
+        for (var index = arrayToShuffle.length - 1; index > 0; index--) {
+
+            // Floor because we only want full indices
+            var randomIndex = Math.floor(Math.random() * index)
+
+            // Swap elements at indices
+            temp = arrayToShuffle[index];
+            arrayToShuffle[index] = arrayToShuffle[randomIndex];
+            arrayToShuffle[randomIndex] = temp;
+        }
+    }
+
+    function checkAnswer(answer) {
+        if (answer === currentCorrectAnswer) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function increaseCorrectAnswers() {

@@ -117,11 +117,11 @@ SceneBase {
         currentRoundText.text = "Round " + currentRound + " / 10";
     }
 
-    function setQuestion (question) {
+    function setQuestionTexts (question) {
         questionText.text = question;
     }
 
-    function setAnswers (answers) {
+    function setAnswerButtonTexts (answers) {
         answerButton1.text = answers[0];
         answerButton2.text = answers[1];
         answerButton3.text = answers[2];
@@ -167,7 +167,7 @@ SceneBase {
         // First lock all buttons so that no new user input is possible
         setAnswerButtonsActive(false)
 
-        // Then after 2 seconds we check each button if it is correct and was clicked
+        // Then after 500ms we check each button if it is correct and was clicked
         showResultsDelay.start()
     }
 
